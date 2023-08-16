@@ -1,0 +1,24 @@
+.banner {
+  border-radius: 8px;
+  background: var(
+    --radial,
+    radial-gradient(
+      133.09% 126.75% at 50% 49.99%,
+      #dc8d48 0%,
+      #d38745 4.19%,
+      #91572b 36.95%,
+      #5e3116 66.01%,
+      #3f1a0a 87.87%,
+      #331105 100%
+    )
+  );
+}
+.banner_text {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
