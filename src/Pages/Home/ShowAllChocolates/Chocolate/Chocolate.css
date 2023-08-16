@@ -1,0 +1,15 @@
+.chocolate {
+  width: 48px;
+  height: 48px;
+  
+  border-radius: 8px;
+  font-size: 20px;
+  background: var(
+    --linear,
+    linear-gradient(
+      131deg,
+      rgba(119, 67, 32, 0.15) 0%,
+      rgba(232, 197, 128, 0.15) 100%
+    )
+  );
+}

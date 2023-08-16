@@ -1,45 +1,39 @@
+import { useLoaderData } from 'react-router-dom';
 import './ShowAllChocolate.css'
+import { useState } from 'react';
+import Chocolate from './Chocolate/Chocolate';
 
 const ShowAllChocolates = () => {
+    const loadedChocolates = useLoaderData();
+    const [chocolates, setChocolates] = useState(loadedChocolates);
+    console.log(loadedChocolates)
     return (
         <div>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     {/* head */}
                     <thead className="bg_thead text-black text-base font-semibold ">
-                        <tr className='text-center'>
+                        <tr className='text-left '>
                             <th>Image</th>
                             <th>Name</th>
                             <th>Country/Factory</th>
                             <th>Category</th>
+                            <th>Price</th>
                             <th>Action</th>
 
                         </tr>
                     </thead>
                     <tbody className=''>
                         {/* row 1 */}
-                        <tr className='text-center'>
-
-                            <td>
-                                <div className="flex items-center space-x-3">
-                                    <div className="avatar">
-                                        <div className="mask  w-[70px] h-[70px] rounded">
-                                            <img className='' src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        
-                                    </div>
-                                </div>
-                            </td>
-                            
-                            <td>Name</td>
-                            <td>Country</td>
-                            <td>Category</td>
-                            <th>
-                                <button className="btn btn-ghost btn-xs">details</button>
-                            </th>
-                        </tr>
+                        {
+                            chocolates.map(chocolate=><Chocolate
+                            key={chocolate._id}
+                            chocolate={chocolate}
+                            setChocolates={setChocolates}
+                            chocolates={chocolates}
+                            ></Chocolate>)
+                        }
+                        
                     </tbody>
 
 
