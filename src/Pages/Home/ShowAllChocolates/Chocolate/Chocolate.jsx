@@ -70,7 +70,7 @@ const Chocolate = ({ chocolate, chocolates, setChocolates }) => {
             <th className=" ">
                 <div className="flex items-center gap-2">
 
-                    <Link className="text-center">
+                    <Link to={`/updatedchocolate/${_id}`} className="text-center">
                         <button className="chocolate pl-[14px]"><LuEdit2 className=""></LuEdit2></button>
                     </Link>
                     <button onClick={() => handleDelete(_id)} className="chocolate text-center">X</button>
