@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 const UpdateChocolate = () => {
     const chocolate = useLoaderData();
     // console.log(chocolate)
-    const {_id,name, photo, country, price} =chocolate;
+    const {_id,name,category, photo, country, price} =chocolate;
     const handleUpdateChocolate = event =>{
         event.preventDefault()
         const from = event.target;
@@ -65,11 +65,11 @@ const UpdateChocolate = () => {
                             <span className="label-text font-semibold text-base">Category</span>
                         </label>
                         <div className="form-control w-full">
-                            <select className="select select-bordered mb-8 border-none" name="category" defaultValue={'Premium'}>
-                                <option>Premium</option>
-                                <option>Normal</option>
-                                <option>Dark</option>
-                                <option>Milk</option>
+                            <select className="select select-bordered mb-8 border-none" defaultValue={category} name="category">
+                                <option value={'Premium'}>Premium</option>
+                                <option value={'Normal'}>Normal</option>
+                                <option value={'Dark'}>Dark</option>
+                                <option value={'Milk'}>Milk</option>
                             </select>
                         </div>
                     </div>
