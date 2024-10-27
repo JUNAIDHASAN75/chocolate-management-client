@@ -1,12 +1,17 @@
 import { useLoaderData } from 'react-router-dom';
 import './ShowAllChocolate.css'
-import { useState } from 'react';
+import {  useState } from 'react';
 import Chocolate from './Chocolate/Chocolate';
 
 const ShowAllChocolates = () => {
     const loadedChocolates = useLoaderData();
     const [chocolates, setChocolates] = useState(loadedChocolates);
-    console.log(loadedChocolates)
+    // useEffect(()=>{
+    //     fetch('https://chocolate-management-server-16ec3aozb-junaidhasan75s-projects.vercel.app/chocolates')
+    //     .then(res=>res.json())
+    //     .then(data=>setChocolates(data))
+    // },[]);
+    console.log(chocolates)
     return (
         <div>
             <div className="overflow-x-auto">

@@ -44,8 +44,8 @@ const UpdateChocolate = () => {
     }
     return (
         <div  className="max-w-[1112px] mx-auto mt-[72px]">
-            <Link to='/'>
-                <p className="text-xl font-medium flex items-center gap-2 mb-8"><BsArrowLeft></BsArrowLeft> All Chocolates</p>
+            <Link className="w-1/4" to='/'>
+                <p className=" w-1/4 text-xl font-medium flex items-center gap-2 mb-8"><BsArrowLeft></BsArrowLeft> All Chocolates</p>
             </Link>
             <hr />
             <div className="bg_addChocolate mt-8">
